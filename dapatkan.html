@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Halaman</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #111, #333);
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 4.5vw;
+      margin-top: 40px; /* geser ke bawah */
+      margin-bottom: 20px;
+    }
+
+    a {
+      margin-top: 20px; /* geser tombol ke bawah */
+    }
+
+    .btn {
+      background-color: #888;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 5vw;
+      border-radius: 10px;
+      cursor: not-allowed;
+      transition: 0.3s;
+    }
+
+    .btn.active {
+      background-color: #007BFF;
+      cursor: pointer;
+    }
+
+    .copyright {
+      font-size: 3vw;
+      color: #aaa;
+      margin-top: auto;
+    }
+
+    @media (min-width: 600px) {
+      h1 { font-size: 32px; }
+      h2 { font-size: 20px; }
+      .btn { font-size: 18px; }
+      .copyright { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HOLOGRAM NATHZ×ANUMMODZ VVIP</h1>
+
+  <h2>File akan tersedia dalam <span id="countdown">20</span> detik</h2>
+
+  <a id="downloadLink" href="https://gentzha.github.io/HOLOGRAM-NATHAEL/" download>
+    <button id="downloadBtn" class="btn" disabled>DAPATKAN</button>
+  </a>
+
+  <div class="copyright">
+    ©2025 nathz the great
+  </div>
+
+  <script>
+    let countdown = 20;
+    const countdownEl = document.getElementById('countdown');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    const interval = setInterval(() => {
+      countdown--;
+      countdownEl.textContent = countdown;
+
+      if (countdown === 0) {
+        clearInterval(interval);
+        downloadBtn.disabled = false;
+        downloadBtn.classList.add('active');
+        downloadBtn.style.cursor = 'pointer';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
